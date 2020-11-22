@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react';
 
-import useGoogleCalender from '../hooks/google-calender';
+import useGoogleCalendar from '../hooks/use-google-calendar';
 import { loadAsyncScript } from '../services/script-loader';
 
 export function withGoogleCalendar(WrappedComponent) {
   return (props) => {
     const [googleScriptLoaded, setGoogleScriptLoaded] = useState(false);
-    const [isAppAuthorised, signUserOut] = useGoogleCalender(
+    const [isAppAuthorised, signUserOut] = useGoogleCalendar(
       googleScriptLoaded
     );
 

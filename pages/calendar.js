@@ -2,9 +2,11 @@ import Head from 'next/head';
 import { useContext } from 'react';
 
 import AppContext from '../contexts/app-context';
+import CalendarHeading from '../components/calendar-heading';
+import { formattedDayMonthFromDate } from '../services/date';
 
 export default function Calendar() {
-  const { isAppAuthorised, signOut } = useContext(AppContext);
+  const { isAppAuthorised } = useContext(AppContext);
 
   if (!isAppAuthorised) {
     return null;
@@ -13,15 +15,12 @@ export default function Calendar() {
   return (
     <div className="container">
       <Head>
-        <title>Create Next App</title>
+        <title>Calendar App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main>
-      <button onClick={signOut}>Sign Out</button>
-        <h1 role="heading" className="title">
-          Calender goes here
-        </h1>
+        <CalendarHeading text={formattedDayMonthFromDate(new Date())} />
       </main>
     </div>
   );
