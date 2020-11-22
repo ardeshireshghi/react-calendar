@@ -1,3 +1,9 @@
+function dateAtHourZero(date) {
+  date.setHours(0, 0, 0, 0);
+
+  return date;
+}
+
 export function formattedDayMonthFromDate(date) {
   const monthNames = [
     'January',
@@ -18,8 +24,11 @@ export function formattedDayMonthFromDate(date) {
 }
 
 export function startEndDatesOfWeek(date) {
-  const startDate = new Date(date);
-  const endDate = new Date(date);
+  let startDate = new Date(date);
+  let endDate = new Date(date);
+
+  startDate = dateAtHourZero(startDate);
+  endDate = dateAtHourZero(endDate);
 
   // Go back to the previous sunday
   startDate.setDate(startDate.getDate() - startDate.getDay());
@@ -31,4 +40,23 @@ export function startEndDatesOfWeek(date) {
     startDate,
     endDate
   };
+}
+
+export function getDayNameFromDate(date) {
+  const days = [
+    'Sunday',
+    'Monday',
+    'Tuesday',
+    'Wednesday',
+    'Thursday',
+    'Friday',
+    'Saturday'
+  ];
+
+  return days[date.getDay()];
+}
+
+export function todayAtZero() {
+  const date = new Date();
+  return dateAtHourZero(date);
 }

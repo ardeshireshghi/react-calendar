@@ -1,6 +1,7 @@
 import React from 'react';
 import App from 'next/app';
 import AppContext from '../contexts/app-context';
+import { CalendarDataProvider } from '../contexts/calendar-data-context';
 import { createGlobalStyle, ThemeProvider } from 'styled-components';
 import { withGoogleCalendar } from '../components/with-google-calendar';
 import theme from '../styles/theme';
@@ -26,12 +27,14 @@ export class CalendarApp extends App {
 
     return (
       <AppContext.Provider value={{ isAppAuthorised, signOut }}>
-        <>
-          <GlobalStyle />
-          <ThemeProvider theme={theme}>
-            <Component {...pageProps} />
-          </ThemeProvider>
-        </>
+        <CalendarDataProvider>
+          <>
+            <GlobalStyle />
+            <ThemeProvider theme={theme}>
+              <Component {...pageProps} />
+            </ThemeProvider>
+          </>
+        </CalendarDataProvider>
       </AppContext.Provider>
     );
   }

@@ -1,5 +1,5 @@
 import { act } from 'react-dom/test-utils';
-import { renderWithAppContext, screen } from './test-utils';
+import { renderWithAllProviders, screen } from './test-utils';
 import Calendar from '../pages/calendar';
 
 describe('Calendar', () => {
@@ -29,9 +29,11 @@ describe('Calendar', () => {
 
     it("shows today's date on calendar heading", async () => {
       await act(async () => {
-        await renderWithAppContext(<Calendar />, {
-          isAppAuthorised: true,
-          signOut: jest.fn()
+        await renderWithAllProviders(<Calendar />, {
+          appContext: {
+            isAppAuthorised: true,
+            signOut: jest.fn()
+          }
         });
       });
 

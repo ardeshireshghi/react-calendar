@@ -1,7 +1,8 @@
 import Head from 'next/head';
-import { useContext, useEffect, useState } from 'react';
+import { useContext, useEffect } from 'react';
 
 import AppContext from '../contexts/app-context';
+import { useCalendarData } from '../contexts/calendar-data-context';
 import CalendarHeading from '../components/calendar-heading';
 import CalendarWeeklyView from '../components/calendar-weekly-view';
 import {
@@ -12,12 +13,11 @@ import { fetchWeeklyEvents } from '../services/google-calendar-api-client';
 
 export default function Calendar() {
   const { isAppAuthorised } = useContext(AppContext);
-  const [calendarEvents, setCalendarEvents] = useState({});
+  const { setCalendarEvents, activeCalendars } = useCalendarData();
+  const { startDate, endDate } = startEndDatesOfWeek(new Date());
 
   useEffect(() => {
     if (isAppAuthorised) {
-      const { startDate, endDate } = startEndDatesOfWeek(new Date());
-
       getEventsData({ startDate, endDate });
     }
   }, [isAppAuthorised]);
@@ -30,7 +30,7 @@ export default function Calendar() {
     const events = await fetchWeeklyEvents({
       startDate,
       endDate,
-      calendarId: 'primary'
+      calendarId: activeCalendars[0]
     });
 
     setCalendarEvents({
@@ -47,6 +47,7 @@ export default function Calendar() {
 
       <main>
         <CalendarHeading text={formattedDayMonthFromDate(new Date())} />
+        <CalendarWeeklyView startDate={startDate} endDate={endDate} />
       </main>
     </div>
   );

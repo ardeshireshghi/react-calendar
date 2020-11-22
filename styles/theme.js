@@ -29,7 +29,7 @@ export const theme = {
     small: '0.833rem',
     large: '1.2rem',
     xlarge: '1.44rem',
-    xxlarge: '1.728rem',
+    xxlarge: '1.728rem'
   },
   headings: {
     family: 'Helvetica Neue'
