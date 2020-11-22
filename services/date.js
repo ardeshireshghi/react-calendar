@@ -1,7 +1,8 @@
-function dateAtHourZero(date) {
-  date.setHours(0, 0, 0, 0);
+export function dateAtHourZero(date) {
+  const copiedDate = new Date(date);
+  copiedDate.setHours(0, 0, 0, 0);
 
-  return date;
+  return copiedDate;
 }
 
 export function formattedDayMonthFromDate(date) {
@@ -59,4 +60,19 @@ export function getDayNameFromDate(date) {
 export function todayAtZero() {
   const date = new Date();
   return dateAtHourZero(date);
+}
+
+export function getDatesBetweenDates(startDate, endDate) {
+  const result = [];
+
+  let currentDate = new Date(startDate);
+
+  while (currentDate < endDate) {
+    const date = new Date(currentDate);
+    result.push(date);
+
+    currentDate.setDate(currentDate.getDate() + 1);
+  }
+
+  return result;
 }

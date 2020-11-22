@@ -1,30 +1,18 @@
 import { act } from 'react-dom/test-utils';
-import { renderWithAllProviders, screen } from './test-utils';
+import { renderWithAllProviders, screen, mockCurrentDate } from './test-utils';
 import Calendar from '../pages/calendar';
 
 describe('Calendar', () => {
   describe('Calendar heading', () => {
-    let realDate;
+    let dateMockRestore;
 
     beforeEach(() => {
       // Setup
-      const currentDate = new Date('2020-11-22');
-      realDate = Date;
-      global.Date = class extends (
-        Date
-      ) {
-        constructor(date) {
-          if (date) {
-            return super(date);
-          }
-
-          return currentDate;
-        }
-      };
+      dateMockRestore = mockCurrentDate('2020-11-22');
     });
 
     afterEach(() => {
-      global.Date = realDate;
+      dateMockRestore();
     });
 
     it("shows today's date on calendar heading", async () => {

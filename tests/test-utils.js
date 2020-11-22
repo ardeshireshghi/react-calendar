@@ -34,4 +34,25 @@ export function renderWithAllProviders(
   });
 }
 
-export { render, screen };
+// Changes `new Date()` not `Date.now()`
+function mockCurrentDate(dateString) {
+  const newCurrentDate = new Date(dateString);
+  const realDate = Date;
+  global.Date = class extends (
+    Date
+  ) {
+    constructor(date) {
+      if (date) {
+        return super(date);
+      }
+
+      return newCurrentDate;
+    }
+  };
+
+  return function restore() {
+    global.Date = realDate;
+  };
+}
+
+export { render, screen, mockCurrentDate };

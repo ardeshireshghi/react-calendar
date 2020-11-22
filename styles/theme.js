@@ -9,10 +9,10 @@ export const theme = {
     midGray: '#eaeaea',
     lightGray: '#f5f4f1',
     purple: '#5c6ae4',
+    green: '#108476',
     border: 'rgba(0,0,0, 0.1)',
     base: 'rgba(0,0,0,0.4)',
-    link: '#41bbe1',
-
+    link: '#41bbe1'
   },
   icon: {
     color: 'gray',
