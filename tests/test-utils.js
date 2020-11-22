@@ -1,4 +1,4 @@
-import { render } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import AppContext from '../contexts/app-context';
 
 export function renderWithAppContext(ui, contextValue = {}, ...options) {
@@ -11,4 +11,4 @@ export function renderWithAppContext(ui, contextValue = {}, ...options) {
   });
 }
 
-export { render };
+export { render, screen };
