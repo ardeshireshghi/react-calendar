@@ -6,13 +6,13 @@ import { withGoogleCalendar } from '../components/with-google-calendar';
 import theme from '../styles/theme';
 
 const GlobalStyle = createGlobalStyle`
+  @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
   html,
   body {
     padding: 0;
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-      Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
-      sans-serif;
+    background-color: ${theme.color.lightGray};
+    font-family: ${theme.font.family}
   }
 
   * {
@@ -27,7 +27,7 @@ export class CalendarApp extends App {
     return (
       <AppContext.Provider value={{ isAppAuthorised, signOut }}>
         <>
-        <GlobalStyle />
+          <GlobalStyle />
           <ThemeProvider theme={theme}>
             <Component {...pageProps} />
           </ThemeProvider>
