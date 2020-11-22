@@ -1,0 +1,93 @@
+{
+  "result": {
+    "kind": "calendar#events",
+    "etag": "\"p33c9pmtunebeq0g\"",
+    "summary": "ardi.eshghi@googlemail.com",
+    "updated": "2020-11-22T15:27:40.007Z",
+    "timeZone": "Europe/London",
+    "accessRole": "owner",
+    "defaultReminders": [
+      {
+        "method": "popup",
+        "minutes": 10
+      },
+      {
+        "method": "email",
+        "minutes": 10
+      }
+    ],
+    "items": [
+      {
+        "kind": "calendar#event",
+        "etag": "\"3212106388370000\"",
+        "id": "0iv3jj4790bq3qjhuqu555rp61",
+        "status": "confirmed",
+        "htmlLink": "https://www.google.com/calendar/event?eid=MGl2M2pqNDc5MGJxM3FqaHVxdTU1NXJwNjEgYXJkaS5lc2hnaGlAZ29vZ2xlbWFpbC5jb20",
+        "created": "2020-11-22T13:53:14.000Z",
+        "updated": "2020-11-22T13:53:14.185Z",
+        "summary": "Test event 1",
+        "creator": {
+          "email": "ardi.eshghi@googlemail.com",
+          "self": true
+        },
+        "organizer": {
+          "email": "ardi.eshghi@googlemail.com",
+          "self": true
+        },
+        "start": {
+          "dateTime": "2020-11-24T12:30:00Z"
+        },
+        "end": {
+          "dateTime": "2020-11-24T13:30:00Z"
+        },
+        "iCalUID": "0iv3jj4790bq3qjhuqu555rp61@google.com",
+        "sequence": 0,
+        "reminders": {
+          "useDefault": true
+        }
+      },
+      {
+        "kind": "calendar#event",
+        "etag": "\"3212106388370001\"",
+        "id": "0iv3jj4790bq3qjhuqu555rp62",
+        "status": "confirmed",
+        "htmlLink": "https://www.google.com/calendar/event?eid=MGl2M2pqNDc5MGJxM3FqaHVxdTU1NXJwNjEgYXJkaS5lc2hnaGlAZ29vZ2xlbWFpbC5jb20",
+        "created": "2020-11-22T13:53:14.000Z",
+        "updated": "2020-11-22T13:53:14.185Z",
+        "summary": "Test event 2",
+        "creator": {
+          "email": "ardi.eshghi@googlemail.com",
+          "self": true
+        },
+        "organizer": {
+          "email": "ardi.eshghi@googlemail.com",
+          "self": true
+        },
+        "start": {
+          "dateTime": "2020-11-26T14:30:00Z"
+        },
+        "end": {
+          "dateTime": "2020-11-26T15:30:00Z"
+        },
+        "iCalUID": "0iv3jj4790bq3qjhuqu555rp61@google.com",
+        "sequence": 0,
+        "reminders": {
+          "useDefault": true
+        }
+      }
+    ]
+  },
+  "body": "{\n \"kind\": \"calendar#events\",\n \"etag\": \"\\\"p33c9pmtunebeq0g\\\"\",\n \"summary\": \"ardi.eshghi@googlemail.com\",\n \"updated\": \"2020-11-22T15:27:40.007Z\",\n \"timeZone\": \"Europe/London\",\n \"accessRole\": \"owner\",\n \"defaultReminders\": [\n  {\n   \"method\": \"popup\",\n   \"minutes\": 10\n  },\n  {\n   \"method\": \"email\",\n   \"minutes\": 10\n  }\n ],\n \"items\": [\n  {\n   \"kind\": \"calendar#event\",\n   \"etag\": \"\\\"3212106388370000\\\"\",\n   \"id\": \"0iv3jj4790bq3qjhuqu555rp61\",\n   \"status\": \"confirmed\",\n   \"htmlLink\": \"https://www.google.com/calendar/event?eid=MGl2M2pqNDc5MGJxM3FqaHVxdTU1NXJwNjEgYXJkaS5lc2hnaGlAZ29vZ2xlbWFpbC5jb20\",\n   \"created\": \"2020-11-22T13:53:14.000Z\",\n   \"updated\": \"2020-11-22T13:53:14.185Z\",\n   \"summary\": \"Test event 2\",\n   \"creator\": {\n    \"email\": \"ardi.eshghi@googlemail.com\",\n    \"self\": true\n   },\n   \"organizer\": {\n    \"email\": \"ardi.eshghi@googlemail.com\",\n    \"self\": true\n   },\n   \"start\": {\n    \"dateTime\": \"2020-11-24T12:30:00Z\"\n   },\n   \"end\": {\n    \"dateTime\": \"2020-11-24T13:30:00Z\"\n   },\n   \"iCalUID\": \"0iv3jj4790bq3qjhuqu555rp61@google.com\",\n   \"sequence\": 0,\n   \"reminders\": {\n    \"useDefault\": true\n   }\n  }\n ]\n}\n",
+  "headers": {
+    "cache-control": "private, max-age=0, must-revalidate, no-transform",
+    "content-encoding": "gzip",
+    "content-length": "543",
+    "content-type": "application/json; charset=UTF-8",
+    "date": "Sun, 22 Nov 2020 17:57:05 GMT",
+    "expires": "Sun, 22 Nov 2020 17:57:05 GMT",
+    "server": "ESF",
+    "vary": "Origin, X-Origin, Referer"
+  },
+  "status": 200,
+  "statusText": null
+}
