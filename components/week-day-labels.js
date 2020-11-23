@@ -49,5 +49,5 @@ WeekDayLabels.propTypes = {
 export default styled(withClassName(WeekDayLabels))`
   display: flex;
   padding-left: ${HOURS_LABEL_WIDTH}px;
-  border-bottom: 1px solid ${(props) => props.theme.color.midGray};
+  border-bottom: 1px solid ${(props) => props.theme.color.lightGray};
 `;

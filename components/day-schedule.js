@@ -10,7 +10,7 @@ import {
 
 const HourCell = styled.div`
   height: ${HOURS_CELL_HEIGHT}px;
-  border-bottom: 1px solid ${(props) => props.theme.color.midGray};
+  border-bottom: 1px solid ${(props) => props.theme.color.lightGray};
 `;
 
 export function DaySchedule({ events } = {}) {
@@ -34,5 +34,5 @@ export default styled(withClassName(DaySchedule))`
   position: relative;
   flex-basis: calc((100% - ${HOURS_LABEL_WIDTH}px) / 7);
   flex-grow: 1;
-  border-left: 1px solid ${(props) => props.theme.color.midGray};
+  border-left: 1px solid ${(props) => props.theme.color.lightGray};
 `;

@@ -20,7 +20,7 @@ const DateNumber = styled.span`
 
 const DayText = styled.span`
   display: inline-block;
-  font-weight: 300;
+  font-weight: ${(props) => (props.isToday ? '400' : '300')};
   vertical-align: middle;
   color: ${(props) =>
     props.isToday ? props.theme.color.black : props.theme.color.gray};
@@ -35,11 +35,17 @@ export function DayLabel({ dateInMonth, dayPlainText, isToday = false } = {}) {
   );
 }
 
+DayLabel.propTypes = {
+  dateInMonth: PropTypes.number.isRequired,
+  dayPlainText: PropTypes.string.isRequired,
+  isToday: PropTypes.bool
+};
+
 export default styled(withClassName(DayLabel))`
   flex-basis: calc((100% - ${HOURS_LABEL_WIDTH}px) / 7);
   flex-grow: 1;
   min-width: 60px;
   padding: 1rem;
   text-align: center;
-  border-left: 1px solid ${(props) => props.theme.color.midGray};
+  border-left: 1px solid ${(props) => props.theme.color.lightGray};
 `;

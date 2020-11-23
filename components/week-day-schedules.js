@@ -10,10 +10,7 @@ import { getDatesBetweenDates } from '../services/date';
 import { filterEventsForDate } from '../services/filter-calendar-events';
 
 export function WeekDaySchedules({ startDate, endDate } = {}) {
-  const {
-    calendarEvents,
-    activeCalendars
-  } = useCalendarData();
+  const { calendarEvents, activeCalendars } = useCalendarData();
 
   const activeCalendarEvents = activeCalendars.reduce(
     (result, activeCalendar) => ({

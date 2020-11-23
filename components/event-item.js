@@ -59,12 +59,3 @@ EventItem.propTypes = {
   startDateTime: PropTypes.instanceOf(Date).isRequired,
   startDateTime: PropTypes.instanceOf(Date).isRequired
 };
-
-// export default styled(withClassName(DayEvents))`
-//   display: flex;
-//   flex-direction: column;
-//   position: relative;
-//   flex-basis: calc((100% - ${HOURS_LABEL_WIDTH}px) / 7);
-//   flex-grow: 1;
-//   border-left: 1px solid ${(props) => props.theme.color.midGray};
-// `;

@@ -12,7 +12,7 @@ const GlobalStyle = createGlobalStyle`
   body {
     padding: 0;
     margin: 0;
-    background-color: ${theme.color.lightGray};
+    background-color: ${theme.color.lighterGray};
     font-family: ${theme.font.family}
   }
 

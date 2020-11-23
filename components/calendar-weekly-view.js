@@ -30,7 +30,7 @@ CalendarWeeklyView.propTypes = {
 export default styled(withClassName(CalendarWeeklyView))`
   background-color: ${(props) => props.theme.color.white};
   border-radius: 5px;
-  margin: ${(props) => `0 ${props.theme.gutter}`};
+  margin: ${(props) => `0 ${props.theme.spacing.medium}`};
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   min-height: 500px;
 `;
