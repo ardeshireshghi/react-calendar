@@ -46,7 +46,9 @@ export default function Calendar() {
       </Head>
 
       <main>
-        <CalendarHeading text={formattedDayMonthFromDate(new Date())} />
+        <CalendarHeading>
+          {formattedDayMonthFromDate(new Date())}
+        </CalendarHeading>
         <CalendarWeeklyView startDate={startDate} endDate={endDate} />
       </main>
     </div>

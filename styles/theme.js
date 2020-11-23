@@ -4,10 +4,12 @@ export const theme = {
     secondary: '#53C1DE',
     white: '#FFF',
     black: '#292929',
-    darkGray: '#a7a7a7',
+
     gray: '#b1b1b1',
-    midGray: '#eaeaea',
-    lightGray: '#f5f4f1',
+    darkGray: '#a7a7a7',
+    darkerGray: '#5d5d5d',
+    lightGray: '#eaeaea',
+    lighterGray: '#f5f4f1',
     purple: '#5c6ae4',
     green: '#108476',
     border: 'rgba(0,0,0, 0.1)',
@@ -33,6 +35,12 @@ export const theme = {
   },
   headings: {
     family: 'Helvetica Neue'
+  },
+  spacing: {
+    small: '0.75rem',
+    medium: '1rem',
+    large: '1.5rem',
+    xlarge: '2rem'
   },
   gutter: '1rem',
   transition: '300ms ease-in-out'
