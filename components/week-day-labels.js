@@ -21,7 +21,7 @@ function getDateDaysBetweenDates(startDate, endDate) {
   return result;
 }
 
-export function WeekDayLabels({ startDate, endDate } = {}) {
+export function WeekDayLabels({ startDate, endDate }) {
   const todayDate = todayAtZero();
 
   return (
@@ -42,8 +42,7 @@ export function WeekDayLabels({ startDate, endDate } = {}) {
 
 WeekDayLabels.propTypes = {
   startDate: PropTypes.instanceOf(Date).isRequired,
-  endDate: PropTypes.instanceOf(Date).isRequired,
-  eventsGroupedByCalendarName: PropTypes.objectOf(PropTypes.array)
+  endDate: PropTypes.instanceOf(Date).isRequired
 };
 
 export default styled(withClassName(WeekDayLabels))`

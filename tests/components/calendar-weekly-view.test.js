@@ -67,7 +67,7 @@ describe('CalendarWeeklyView', () => {
           end: '2020-11-28T12:00:00Z'
         },
         {
-          summary: 'Event end of next sunday',
+          summary: 'Event end of next saturday',
           start: '2020-11-28T23:20:00Z',
           end: '2020-11-29T00:45:00Z'
         }
@@ -96,7 +96,7 @@ describe('CalendarWeeklyView', () => {
 
       expect(getByText('Test event 1')).toBeInTheDocument();
       expect(getByText('Test event 2')).toBeInTheDocument();
-      expect(getByText('Event end of next sunday')).toBeInTheDocument();
+      expect(getByText('Event end of next saturday')).toBeInTheDocument();
       expect(queryByText('Event in the past')).not.toBeInTheDocument();
     });
 

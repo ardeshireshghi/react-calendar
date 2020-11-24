@@ -57,5 +57,5 @@ export default function EventItem({ title, startDateTime, endDateTime } = {}) {
 EventItem.propTypes = {
   title: PropTypes.string.isRequired,
   startDateTime: PropTypes.instanceOf(Date).isRequired,
-  startDateTime: PropTypes.instanceOf(Date).isRequired
+  endDateTime: PropTypes.instanceOf(Date).isRequired
 };

@@ -30,21 +30,4 @@ export const fetchWeeklyEvents = async ({
       end
     };
   });
-
-  // if (events.length > 0) {
-  //   for (let i = 0; i < events.length; i++) {
-  //     var event = events[i];
-  //     var start = event.start.dateTime;
-  //     var end = event.end.dateTime;
-
-  //     if (!start) {
-  //       start = event.start.date;
-  //       end = event.end.date;
-  //     }
-
-  //     appendPre(event.summary);
-  //     appendPre(`Start: ${start}`);
-  //     appendPre(`End: ${end}`);
-  //   }
-  // }
 };
