@@ -8,6 +8,8 @@ const DateNumber = styled.span`
   display: inline-block;
   vertical-align: middle;
   font-size: ${(props) => props.theme.font.large};
+  width: 40px;
+  height: 40px;
   font-weight: 500;
   margin-right: 0.5rem;
   padding: 0.5rem;

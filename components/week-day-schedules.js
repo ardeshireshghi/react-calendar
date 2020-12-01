@@ -7,25 +7,17 @@ import withClassName from './with-classname';
 import { useCalendarData } from '../contexts/calendar-data-context';
 import { getDatesBetweenDates } from '../services/date';
 
-import { filterEventsForDate } from '../services/filter-calendar-events';
+import { selectEventsForDate } from '../services/filter-calendar-events';
 
 export function WeekDaySchedules({ startDate, endDate } = {}) {
   const { calendarEvents, activeCalendars } = useCalendarData();
-
-  const activeCalendarEvents = activeCalendars.reduce(
-    (result, activeCalendar) => ({
-      ...result,
-      [activeCalendar]: calendarEvents[activeCalendar]
-    }),
-    {}
-  );
 
   return (
     <>
       <HourLabels />
       {getDatesBetweenDates(startDate, endDate).map((date, index) => (
         <DaySchedule
-          events={filterEventsForDate(date, activeCalendarEvents)}
+          events={selectEventsForDate(date, activeCalendars, calendarEvents)}
           key={index}
         />
       ))}

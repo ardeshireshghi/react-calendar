@@ -1,22 +1,15 @@
-import { dateAtHourZero } from './date';
+import { formatDateToDateString } from './date';
 
-export function filterEventsForDate(date, calendarEvents) {
-  const allCalendars = Object.keys(calendarEvents);
-  const dayAfterDate = new Date(date);
+export function selectEventsForDate(date, activeCalendars, calendarEvents) {
+  const dateKey = formatDateToDateString(date);
 
-  dayAfterDate.setDate(dayAfterDate.getDate() + 1);
-
-  const matches = allCalendars
-    .map((calendarName) => {
+  const matchingEvents = activeCalendars
+    .filter((calendarName) => {
       const events = calendarEvents[calendarName];
-
-      return events.filter((event) => {
-        const startTimeDay = dateAtHourZero(event.start);
-        const eventStartsInSameDay = startTimeDay.getTime() === date.getTime();
-        return eventStartsInSameDay;
-      });
+      return events && events[dateKey].length > 0;
     })
+    .map((calendarName) => calendarEvents[calendarName])
     .flat();
 
-  return matches;
+  return matchingEvents;
 }

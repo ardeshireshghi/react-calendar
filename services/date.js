@@ -1,3 +1,5 @@
+const intlDateFormatter = new Intl.DateTimeFormat('en-GB');
+
 export function dateAtHourZero(date) {
   const copiedDate = new Date(date);
   copiedDate.setHours(0, 0, 0, 0);
@@ -75,4 +77,8 @@ export function getDatesBetweenDates(startDate, endDate) {
   }
 
   return result;
+}
+
+export function formatDateToDateString(date) {
+  return intlDateFormatter.format(date);
 }

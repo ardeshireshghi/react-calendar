@@ -13,7 +13,7 @@ import { fetchWeeklyEvents } from '../services/google-calendar-api-client';
 
 export default function Calendar() {
   const { isAppAuthorised } = useContext(AppContext);
-  const { setCalendarEvents, activeCalendars } = useCalendarData();
+  const { addCalendarEvents, activeCalendars } = useCalendarData();
   const { startDate, endDate } = startEndDatesOfWeek(new Date());
 
   useEffect(() => {
@@ -33,9 +33,7 @@ export default function Calendar() {
       calendarId: activeCalendars[0]
     });
 
-    setCalendarEvents({
-      primary: events
-    });
+    addCalendarEvents('primary', events);
   };
 
   return (

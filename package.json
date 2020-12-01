@@ -7,6 +7,8 @@
     "build": "next build",
     "start": "next start",
     "test": "jest",
+    "static:export": "next build && next export",
+    "static:serve": "npx serve -s ./out",
     "format:check": "prettier --list-different \"**/*.{js,jsx,ts,tsx,json,css,scss,md}\"",
     "format:write": "prettier --write \"**/*.{js,jsx,ts,tsx,json,css,scss,md}\""
   },

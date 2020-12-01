@@ -1,2 +1,5 @@
-node_modules
+**/*.yml
+**/*.yaml
+out
 .next
+coverage
