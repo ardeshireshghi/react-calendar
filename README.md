@@ -59,8 +59,8 @@ I was hoping I could make use of `Intl.DateTimeFormat` so I decided to not go fo
 
 ### Notes and considerations
 
-1. `Next.js` is the library of choice and this being my first time, I might have not used the best practices.
-2. Test coverage can be improved. I usually write tests for each component. But it proved to be really time-consuming. So at some point, I decided to not cover everything. Below is the current coverage:
+
+1. Test coverage can be improved. I usually write tests for each component. But it proved to be really time-consuming. So at some point, I decided to not cover everything. Below is the current coverage:
 
 ```
 --------------------------------|---------|----------|---------|---------|-------------------
@@ -71,23 +71,19 @@ All files                       |   95.71 |    56.76 |   97.01 |   95.71 |
 
 As seen, not all the branches of code have been tested.
 
-3. Some of the requirements in the spec are not met because of lack of time:
+2. Some of the features that I intended to do are left for now:
 
-- Multi calendar support
-- All day events are not covered
+* Multi calendar support
+* All day events are not covered
 
-4. Some of the key challenges:
+3. These were some of my challenges:
 
 - Making Google Calendar sign-in work easily with `Next.js`
 - Using `Next.js` and `styled-components` for the first time
 
-5. Other tools used:
+4. Other tools used:
 
 - React
 - Jest
 - Prettier
-- testing-library
-
-### Architecture
-
-Please refer to [this](https://docs.google.com/document/d/1LhOWcMYGM2asc_RbJqgaDH0hwbHBmEDYytRjAaZjbCI/edit?usp=sharing) document for more details.
+- testing-library (React)
